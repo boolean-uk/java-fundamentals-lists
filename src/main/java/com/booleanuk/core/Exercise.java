@@ -43,11 +43,9 @@ public class Exercise extends ExerciseBase {
         TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
            second number contained in the list that is returned from getFavouriteNumbers
      */
-    public Integer getSecondNumber(){
-        ArrayList<Integer> list = new ArrayList<>();
-        return list.get(1); //list.get(indexnumber) gets you the element of that index in tha ArrayList
+    public int getSecondNumber(){
+        return getFavouriteNumbers().get(1); //list.get(indexnumber) gets you the element of that index in tha ArrayList
     }
-
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -109,6 +107,7 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
+    // With a boolean method you cant give a ArrayList back because it's just a true or false
     public boolean containsIngredient(ArrayList<String> list, String ingredient){
         if(list.contains(ingredient)){
             return true;
