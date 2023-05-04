@@ -27,7 +27,7 @@ class ExerciseTest {
 
     @Test
     public void shouldMultiply() {
-        ArrayList<Integer> list = new ArrayList<>(){{
+        ArrayList<Integer> list = new ArrayList<Integer>(){{
             add(2);
             add(5);
             add(6);
@@ -42,7 +42,7 @@ class ExerciseTest {
 
     @Test
     public void shouldMultiplyMore() {
-        ArrayList<Integer> list = new ArrayList<>(){{
+        ArrayList<Integer> list = new ArrayList<Integer>(){{
             add(3);
             add(7);
             add(12);
@@ -69,7 +69,7 @@ class ExerciseTest {
 
     @Test
     public void mustNotBeEmpty() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<String>(){{
             add("Java");
             add("JavaScript");
         }};
@@ -88,7 +88,7 @@ class ExerciseTest {
 
     @Test
     public void mustRemoveIngredient() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<String>(){{
             add("milk");
             add("coffee");
             add("water");
@@ -101,7 +101,7 @@ class ExerciseTest {
 
     @Test
     public void mustCheckList() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<String>(){{
             add("milk");
             add("coffee");
             add("water");
