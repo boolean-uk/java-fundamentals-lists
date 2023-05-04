@@ -3,7 +3,7 @@ package com.booleanuk.helpers;
 import java.util.ArrayList;
 
 public class ExerciseBase {
-    public int getSecondNumber() {
+    public Integer getSecondNumber() {
         return -1;
     }
 
