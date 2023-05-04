@@ -44,8 +44,10 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
-
-
+    @Override
+    public int getSecondNumber() {
+        return getFavouriteNumbers().get(1);
+    }
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
          - A list of whole numbers
@@ -57,15 +59,24 @@ public class Exercise extends ExerciseBase {
      */
 
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> list, int multiplier) {
+        for (int i = 0; i < list.size(); i++) {
+            list.set(i, list.get(i) * multiplier);
+        }
+        return list;
+    }
 
-    /*
+
+   /*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
-
-
+    @Override
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.size()==0;
+    }
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
          - A list of strings
@@ -90,7 +101,6 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
 
 
 }
