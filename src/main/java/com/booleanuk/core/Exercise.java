@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import com.booleanuk.helpers.ExerciseBase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Exercise extends ExerciseBase {
     /*
@@ -44,7 +45,7 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
-
+    public int getSecondNumber() { return getFavouriteNumbers().get(1); }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -56,7 +57,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
-
+    public ArrayList<Integer> multiply(ArrayList<Integer> numbers, int number) {
+        ArrayList<Integer> result = numbers;
+        result.replaceAll(x -> x * number);
+        return result;
+    }
 
     /*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
@@ -64,7 +69,7 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
-
+    public boolean isEmpty(ArrayList<String> strings) { return strings.isEmpty(); }
 
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
@@ -73,7 +78,11 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
-
+    public ArrayList<String> addIngredient(ArrayList<String> ingredients, String ingredient) {
+        ArrayList<String> result = ingredients;
+        result.add(ingredient);
+        return result;
+    }
 
     /*
         TODO: 5. Create a method named removeIngredient that accepts two parameters in this order:
