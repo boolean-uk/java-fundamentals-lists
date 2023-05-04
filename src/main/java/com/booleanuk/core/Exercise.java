@@ -2,6 +2,7 @@ package com.booleanuk.core;
 
 import com.booleanuk.helpers.ExerciseBase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Exercise extends ExerciseBase {
@@ -79,6 +80,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must add the second parameter into the list provided and then return the list
      */
+        public ArrayList<String> addIngredient(ArrayList<String> list, String ingredient){
+            list.add(ingredient);
+            return list;
+        }
 
 
 
@@ -88,7 +93,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
-
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String ingredient){
+        list.remove(ingredient);
+        return list;
+    }
 
 
     /*
@@ -97,7 +105,9 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
+    public boolean containsIngredient(ArrayList<String> list, String ingredient){
+        return list.contains(ingredient);
+    }
 
 
 }
