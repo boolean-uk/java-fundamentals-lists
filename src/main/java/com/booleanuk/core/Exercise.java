@@ -59,9 +59,7 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
     public ArrayList<Integer> multiply (ArrayList<Integer> list, int num) {
-        for (int i = 0; i < list.size(); i++) {
-            list.set(i, list.get(i)*num);
-        }
+        list.replaceAll(e -> e*num);
         return list;
     }
 
@@ -73,11 +71,7 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
     public boolean isEmpty (ArrayList<String> list) {
-        if(list.size() == 0) {
-            return true;
-        }else{
-            return false;
-        }
+        return list.isEmpty();
     }
 
 
