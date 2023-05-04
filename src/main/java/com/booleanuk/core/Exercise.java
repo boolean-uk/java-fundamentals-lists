@@ -43,8 +43,9 @@ public class Exercise extends ExerciseBase {
         TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
            second number contained in the list that is returned from getFavouriteNumbers
      */
-
-
+    public int getSecondNumber(){
+        return getFavouriteNumbers().get(1); //list.get(indexnumber) gets you the element of that index in tha ArrayList
+    }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -56,6 +57,13 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> list1, int number) {
+        list1.replaceAll(e -> (e * number));
+        return list1;
+    }
+
+
+
 
 
     /*
@@ -64,6 +72,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
 
 
     /*
@@ -73,15 +84,20 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
-
-
+    public ArrayList<String> addIngredient(ArrayList<String> list, String ingredient) {
+        list.add(ingredient);
+        return list;
+    }
     /*
         TODO: 5. Create a method named removeIngredient that accepts two parameters in this order:
          - A list of strings
          - A string
          The method must remove the second parameter from the list and then return the list
      */
-
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String ingredient) {
+        list.remove(ingredient);
+        return list;
+    }
 
 
     /*
@@ -91,6 +107,10 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
-
-}
+    // With a boolean method you cant give a ArrayList back because it's just a true or false
+    public boolean containsIngredient(ArrayList<String> list, String ingredient){
+        if(list.contains(ingredient)){
+            return true;
+        }
+        return false;
+}}
