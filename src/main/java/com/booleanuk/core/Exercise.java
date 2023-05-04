@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import com.booleanuk.helpers.ExerciseBase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Exercise extends ExerciseBase {
     /*
@@ -59,7 +60,7 @@ public class Exercise extends ExerciseBase {
      */
 
     public ArrayList<Integer> multiply(ArrayList<Integer> ints, int number) {
-        return (ArrayList<Integer>) ints.stream().map(i -> i * number).toList();
+        return new ArrayList<>(ints.stream().map(i -> i * number).toList());
     }
 
     /*
@@ -78,7 +79,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must add the second parameter into the list provided and then return the list
      */
-
+    public ArrayList<String> addIngredient(ArrayList<String> ingredients, String ingredient) {
+        ingredients.add(ingredient);
+        return ingredients;
+    }
 
 
     /*
@@ -87,7 +91,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
-
+    public ArrayList<String> removeIngredient(ArrayList<String> ingredients, String ingredient) {
+        ingredients.remove(ingredient);
+        return ingredients;
+    }
 
 
     /*
@@ -96,7 +103,9 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
+    public boolean containsIngredient(ArrayList<String> ingredients, String ingredient) {
+        return ingredients.contains(ingredient);
+    }
 
 
 }
