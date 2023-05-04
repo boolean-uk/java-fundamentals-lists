@@ -60,7 +60,8 @@ public class Exercise extends ExerciseBase {
      */
 
     public ArrayList<Integer> multiply(ArrayList<Integer> ints, int number) {
-        return new ArrayList<>(ints.stream().map(i -> i * number).toList());
+        ints.replaceAll(i -> i * number);
+        return ints;
     }
 
     /*
