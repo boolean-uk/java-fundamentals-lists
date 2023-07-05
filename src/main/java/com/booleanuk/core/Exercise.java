@@ -44,6 +44,13 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+        public int getSecondNumber(){
+            ArrayList<Integer> numbers = getFavouriteNumbers();
+            if(numbers.size() >= 2){
+                return numbers.get(1);
+            }
+            return -1; // If the list does not contain at least two numbers
+        }
 
 
     /*
@@ -56,6 +63,10 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+        public ArrayList<Integer> multiply(ArrayList<Integer> listOfNumbers, int number){
+            listOfNumbers.replaceAll(n->n * number);
+            return listOfNumbers;
+        }
 
 
     /*
@@ -64,6 +75,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
+        public boolean isEmpty(ArrayList<String> strings){
+            return strings.isEmpty();
+        }
 
 
     /*
@@ -73,6 +87,11 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+        public ArrayList<String> addIngredient(ArrayList<String> strings, String string){
+            strings.add(string);
+            return strings;
+        }
+
 
 
     /*
@@ -81,6 +100,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+        public ArrayList<String> removeIngredient(ArrayList<String> strings, String string){
+            strings.remove(string);
+            return strings;
+        }
 
 
 
@@ -91,6 +114,8 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
+        public boolean containsIngredient(ArrayList<String> strings, String string){
+            return strings.contains(string);
+        }
 
 }
