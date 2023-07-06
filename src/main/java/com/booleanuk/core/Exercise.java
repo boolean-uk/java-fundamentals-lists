@@ -44,7 +44,9 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
-
+    public int getSecondNumber(){
+       return getFavouriteNumbers().get(1);
+    }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -64,7 +66,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
-
+    public boolean isEmpty(ArrayList<String> list){
+        return list.isEmpty();
+    }
 
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
@@ -82,7 +86,10 @@ public class Exercise extends ExerciseBase {
          The method must remove the second parameter from the list and then return the list
      */
 
-
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String ingredient) {
+        list.remove(ingredient);
+        return list;
+    }
 
     /*
         TODO: 6. Create a method named containsIngredient that accepts two parameters in this order:
