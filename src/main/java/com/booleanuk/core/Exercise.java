@@ -58,6 +58,10 @@ public class Exercise extends ExerciseBase {
          Use the ArrayList's replaceAll method to iterate through the ArrayList and replace each value with its double
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
+    public ArrayList<Integer> multiply(ArrayList<Integer> numbers, int multiplier) {
+        numbers.replaceAll(n -> n * multiplier);
+        return numbers;
+    }
 
 
 
@@ -79,7 +83,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must add the second parameter into the list provided and then return the list
      */
-
+        public ArrayList<String> addIngredient(ArrayList<String> ingredients, String ingredient) {
+            ingredients.add(ingredient);
+            return ingredients;
+        }
 
 
     /*
@@ -98,7 +105,9 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
-     */
+     */public boolean containsIngredient(ArrayList<String> ingredients, String ingredient) {
+            return ingredients.contains(ingredient);
+    }
 
 
 
