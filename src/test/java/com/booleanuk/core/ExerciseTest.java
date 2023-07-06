@@ -27,7 +27,7 @@ class ExerciseTest {
 
     @Test
     public void shouldMultiply() {
-        ArrayList<Integer> list = new ArrayList<>(){{
+        ArrayList<Integer> list = new ArrayList<>() {{
             add(2);
             add(5);
             add(6);
@@ -42,7 +42,7 @@ class ExerciseTest {
 
     @Test
     public void shouldMultiplyMore() {
-        ArrayList<Integer> list = new ArrayList<>(){{
+        ArrayList<Integer> list = new ArrayList<>() {{
             add(3);
             add(7);
             add(12);
@@ -64,18 +64,18 @@ class ExerciseTest {
         ArrayList<String> list = new ArrayList<>();
         // Used assertEquals so that the base method which now returns an int doesn't
         // accidentally pass the test.
-        Assertions.assertEquals(true, this.exercise.isEmpty(list));
+        Assertions.assertTrue(this.exercise.isEmpty(list));
     }
 
     @Test
     public void mustNotBeEmpty() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<>() {{
             add("Java");
             add("JavaScript");
         }};
         // Used assertEquals so that the base method which now returns an int doesn't
         // accidentally pass the test.
-        Assertions.assertEquals(false, this.exercise.isEmpty(list));
+        Assertions.assertFalse(this.exercise.isEmpty(list));
     }
 
     @Test
@@ -88,7 +88,7 @@ class ExerciseTest {
 
     @Test
     public void mustRemoveIngredient() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<>() {{
             add("milk");
             add("coffee");
             add("water");
@@ -101,7 +101,7 @@ class ExerciseTest {
 
     @Test
     public void mustCheckList() {
-        ArrayList<String> list = new ArrayList<>(){{
+        ArrayList<String> list = new ArrayList<>() {{
             add("milk");
             add("coffee");
             add("water");
