@@ -43,7 +43,9 @@ public class Exercise extends ExerciseBase {
         TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
            second number contained in the list that is returned from getFavouriteNumbers
      */
-
+    public int getSecondNumber(){
+        return getFavouriteNumbers().get(1);
+    }
 
 
     /*
@@ -56,6 +58,10 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> multiplyList, int number){
+        multiplyList.replaceAll(element -> element * number);
+        return multiplyList;
+    }
 
 
     /*
@@ -63,6 +69,9 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+    public boolean isEmpty(ArrayList<String> stringList){
+        return stringList.isEmpty();
+    }
 
 
 
@@ -73,6 +82,10 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient (ArrayList<String> list, String ingredient){
+        list.add(ingredient);
+        return list;
+    }
 
 
     /*
@@ -81,7 +94,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
-
+    public ArrayList<String> removeIngredient (ArrayList<String> list, String ingredient){
+        list.remove(ingredient);
+        return list;
+    }
 
 
     /*
@@ -90,7 +106,9 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
+    public boolean containsIngredient (ArrayList<String> list, String ingredient){
+        return list.contains(ingredient);
+    }
 
 
 }
