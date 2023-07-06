@@ -2,6 +2,7 @@ package com.booleanuk.core;
 
 import com.booleanuk.helpers.ExerciseBase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Exercise extends ExerciseBase {
@@ -43,7 +44,10 @@ public class Exercise extends ExerciseBase {
         TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
            second number contained in the list that is returned from getFavouriteNumbers
      */
-
+    public int getSecondNumber() {
+        ArrayList<Integer> list = getFavouriteNumbers();
+        return list.get(1);
+    }
 
 
     /*
@@ -56,6 +60,12 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> list, int number) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for(int num: list)
+            result.add(num*number);
+        return result;
+    }
 
 
     /*
@@ -64,6 +74,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
 
 
     /*
@@ -73,6 +86,10 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient(ArrayList<String> list, String s) {
+        list.add(s);
+        return list;
+    }
 
 
     /*
@@ -82,7 +99,10 @@ public class Exercise extends ExerciseBase {
          The method must remove the second parameter from the list and then return the list
      */
 
-
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String s) {
+        list.remove(s);
+        return list;
+    }
 
     /*
         TODO: 6. Create a method named containsIngredient that accepts two parameters in this order:
@@ -91,6 +111,8 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
+    public boolean containsIngredient(ArrayList<String> list, String s) {
+        return list.contains(s);
+    }
 
 }
