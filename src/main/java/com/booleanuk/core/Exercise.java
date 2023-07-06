@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import com.booleanuk.helpers.ExerciseBase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Exercise extends ExerciseBase {
     /*
@@ -55,7 +56,10 @@ public class Exercise extends ExerciseBase {
          Use the ArrayList's replaceAll method to iterate through the ArrayList and replace each value with its double
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
-
+        public List<Integer> multiply(List<Integer> list,int number){
+            list.replaceAll(x-> x*number);
+            return list;
+        }
 
 
     /*
@@ -72,7 +76,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must add the second parameter into the list provided and then return the list
      */
-
+        public List<String> addIngredient(List<String> strings, String ingredient){
+            strings.add(ingredient);
+            return strings;
+        }
 
 
     /*
@@ -91,6 +98,8 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
+        public boolean containsIngredient(List<String> strings, String ingredient){
+            return strings.contains(ingredient);
+        }
 
 }
