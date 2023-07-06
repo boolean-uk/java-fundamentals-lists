@@ -45,7 +45,9 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
-
+    public int getSecondNumber(){
+        return getFavouriteNumbers().get(1);
+    }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -57,7 +59,10 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
-
+    public ArrayList<Integer> multiply(ArrayList<Integer> wholeNumbersList, int wholeNumber) {
+        wholeNumbersList.replaceAll(e -> e * wholeNumber);
+        return wholeNumbersList;
+    }
 
     /*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
@@ -65,7 +70,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
-
+    public boolean isEmpty(ArrayList<String> stringList) {
+        return stringList.isEmpty();
+    }
 
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
