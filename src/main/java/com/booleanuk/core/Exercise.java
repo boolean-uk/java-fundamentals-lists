@@ -2,7 +2,9 @@ package com.booleanuk.core;
 
 import com.booleanuk.helpers.ExerciseBase;
 
+
 import java.util.ArrayList;
+
 
 public class Exercise extends ExerciseBase {
     /*
@@ -44,9 +46,12 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber() {
+        ArrayList<Integer> favoriteNumbers = getFavouriteNumbers();
+        return favoriteNumbers.get(1);
+    }
 
-
-    /*
+/*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
          - A list of whole numbers
          - A whole number
@@ -57,12 +62,20 @@ public class Exercise extends ExerciseBase {
      */
 
 
-
-    /*
+    public ArrayList<Integer> multiply(ArrayList<Integer> nums, int mplier) {
+        nums.replaceAll(base -> base * mplier);
+        return nums;
+    }
+/*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
+
 
 
 
@@ -73,6 +86,13 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient(ArrayList<String> list, String ingredient) {
+
+        list.add(ingredient);
+
+
+        return list;
+    }
 
 
     /*
@@ -81,7 +101,11 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String item) {
+        list.remove(1);
 
+        return list;
+    }
 
 
     /*
@@ -91,6 +115,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
+    public boolean containsIngredient(ArrayList<String> list, String item) {
 
+        return  list.contains(item);
+    }
 
 }
