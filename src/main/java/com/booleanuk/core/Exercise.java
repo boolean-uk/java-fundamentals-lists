@@ -2,6 +2,7 @@ package com.booleanuk.core;
 
 import com.booleanuk.helpers.ExerciseBase;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Exercise extends ExerciseBase {
@@ -44,9 +45,12 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber() {
+        ArrayList<Integer> favoriteNumbers = getFavouriteNumbers();
+        return favoriteNumbers.get(1);
+    }
 
-
-    /*
+/*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
          - A list of whole numbers
          - A whole number
@@ -56,7 +60,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public int multiply(int[] nums, int num) {
 
+
+        return 5;
+    }
 
     /*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
@@ -90,7 +98,6 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
 
 
 }
