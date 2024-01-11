@@ -43,8 +43,9 @@ public class Exercise extends ExerciseBase {
         TODO: 1. Create a method named getSecondNumber that returns a whole number. It must return the
            second number contained in the list that is returned from getFavouriteNumbers
      */
-
-
+    public int getSecondNumber() {
+        return getFavouriteNumbers().get(1);
+    }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -55,6 +56,14 @@ public class Exercise extends ExerciseBase {
          Use the ArrayList's replaceAll method to iterate through the ArrayList and replace each value with its double
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
+    public ArrayList<Integer> multiply(ArrayList<Integer> list, int number) {
+        for(int i = 0; i < list.size(); i++) {
+            int newNumber = list.get(i) * number;
+            list.set(i, newNumber);
+        }
+        return list;
+    }
+
 
 
 
@@ -63,6 +72,9 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
 
 
 
@@ -72,7 +84,11 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must add the second parameter into the list provided and then return the list
      */
+    public ArrayList<String> addIngredient(ArrayList<String> list, String text){
+        list.add(text);
 
+        return list;
+    }
 
 
     /*
@@ -81,6 +97,16 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String text){
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i).equals(text)){
+                list.remove(i);
+
+            }
+
+        }
+        return list;
+    }
 
 
 
@@ -90,6 +116,18 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
+    public boolean containsIngredient(ArrayList<String> list, String text){
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i).equals(text)){
+                return true;
+
+            }
+
+        }
+        return false;
+
+
+    }
 
 
 
