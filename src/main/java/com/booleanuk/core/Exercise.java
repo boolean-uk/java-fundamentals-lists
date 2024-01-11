@@ -58,7 +58,7 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
     public ArrayList<Integer> multiply(ArrayList<Integer> list, int num){
-        list.replaceAll(integer -> integer * num);
+        list.replaceAll(i -> i * num);
         return list;
     }
 
