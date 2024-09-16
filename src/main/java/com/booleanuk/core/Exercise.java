@@ -44,6 +44,9 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber() {
+        return getFavouriteNumbers().get(1);
+    }
 
 
     /*
@@ -56,6 +59,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> arrayList, int wholeNumber) {
+        arrayList.replaceAll(abn -> abn * wholeNumber);
+        return arrayList;
+    }
+
 
 
     /*
@@ -63,6 +71,10 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+
+    public boolean isEmpty(ArrayList<String> list) {
+        return list.isEmpty();
+    }
 
 
 
@@ -73,6 +85,10 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient(ArrayList<String> list, String str) {
+        list.add(str);
+        return list;
+    }
 
 
     /*
@@ -82,6 +98,11 @@ public class Exercise extends ExerciseBase {
          The method must remove the second parameter from the list and then return the list
      */
 
+    public ArrayList<String> removeIngredient(ArrayList<String> list, String str) {
+        list.remove(str);
+        return list;
+    }
+
 
 
     /*
@@ -90,7 +111,9 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
+    public boolean containsIngredient(ArrayList<String> list, String str) {
+        return list.contains(str);
+    }
 
 
 }
