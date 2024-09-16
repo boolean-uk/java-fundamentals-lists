@@ -44,6 +44,11 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+        public int getSecondNumber()
+        {
+            ArrayList<Integer> favNums= getFavouriteNumbers();
+            return favNums.get(1);
+        }
 
 
     /*
@@ -55,7 +60,11 @@ public class Exercise extends ExerciseBase {
          Use the ArrayList's replaceAll method to iterate through the ArrayList and replace each value with its double
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
-
+    public ArrayList<Integer> multiply(ArrayList<Integer> numlist, int number)
+    {
+       numlist.replaceAll(integer -> integer*number);
+        return  numlist;
+    }
 
 
     /*
@@ -63,6 +72,10 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+    public boolean isEmpty(ArrayList<String> listOfStrings)
+    {
+      return  listOfStrings.isEmpty();
+    }
 
 
 
@@ -73,7 +86,11 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
-
+    public ArrayList<String> addIngredient(ArrayList<String> listOfStrings, String givenString)
+    {
+        listOfStrings.add(givenString);
+        return listOfStrings;
+    }
 
     /*
         TODO: 5. Create a method named removeIngredient that accepts two parameters in this order:
@@ -81,6 +98,11 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+    public ArrayList<String> removeIngredient(ArrayList<String> listofStrings, String givenString)
+    {
+        listofStrings.remove(givenString);
+        return listofStrings;
+    }
 
 
 
@@ -90,7 +112,10 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
-
+    public boolean containsIngredient(ArrayList<String> listofStrings,String givenString)
+    {
+       return listofStrings.contains(givenString);
+    }
 
 
 }
