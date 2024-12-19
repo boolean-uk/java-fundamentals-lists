@@ -7,7 +7,7 @@ public class ExerciseBase {
         return -1;
     }
 
-    public ArrayList<Integer> multiply(ArrayList<Integer> list, int multiplier) {
+    public static ArrayList<Integer> multiply(ArrayList<Integer> list, int multiplier) {
         ArrayList<Integer> dummy = new ArrayList<>();
         dummy.add(1);
         return dummy;
