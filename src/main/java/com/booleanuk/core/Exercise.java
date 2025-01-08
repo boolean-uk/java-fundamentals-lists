@@ -2,6 +2,7 @@ package com.booleanuk.core;
 
 import com.booleanuk.helpers.ExerciseBase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Exercise extends ExerciseBase {
@@ -44,7 +45,10 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber(){
 
+        return getFavouriteNumbers().get(1);
+    }
 
     /*
         TODO: 2. Create a method named multiply that accepts two parameters in this order:
@@ -56,7 +60,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> integers, int number){
+        integers.replaceAll(e -> e*number);
 
+        return integers;
+    }
 
     /*
         TODO: 3. Create a method named isEmpty that accepts one parameter:
@@ -64,7 +72,9 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the provided list is empty or not
      */
 
-
+    public boolean isEmpty(ArrayList<String> strings){
+        return strings.isEmpty();
+    }
 
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
@@ -73,7 +83,10 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
-
+    public ArrayList<String> addIngredient(ArrayList<String> strings, String s){
+        strings.add(s);
+        return strings;
+    }
 
     /*
         TODO: 5. Create a method named removeIngredient that accepts two parameters in this order:
@@ -82,7 +95,10 @@ public class Exercise extends ExerciseBase {
          The method must remove the second parameter from the list and then return the list
      */
 
-
+    public ArrayList<String> removeIngredient(ArrayList<String> strings, String s){
+        strings.remove(s);
+        return strings;
+    }
 
     /*
         TODO: 6. Create a method named containsIngredient that accepts two parameters in this order:
@@ -91,6 +107,8 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
+    public boolean containsIngredient(ArrayList<String> strings, String s){
+        return strings.contains(s);
+    }
 
 }
