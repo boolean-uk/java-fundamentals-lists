@@ -44,6 +44,11 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber(){
+        ArrayList<Integer> favoriteNumbers = getFavouriteNumbers();
+        return favoriteNumbers.get(1);
+    }
+
 
 
     /*
@@ -56,6 +61,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> listOfNums, int aNum){
+        listOfNums.replaceAll(e -> e * aNum);
+        return listOfNums;
+    }
+
 
 
     /*
@@ -63,6 +73,11 @@ public class Exercise extends ExerciseBase {
          - A list of strings
          The method must return a boolean that indicates whether the provided list is empty or not
      */
+
+    public boolean isEmpty(ArrayList<String> listOfStrings){
+        return listOfStrings.isEmpty();
+    }
+
 
 
 
@@ -73,6 +88,12 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient(ArrayList<String> listOfStrings, String aString){
+        listOfStrings.add(aString);
+        return listOfStrings;
+    }
+
+
 
 
     /*
@@ -81,6 +102,12 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+
+    public ArrayList<String> removeIngredient(ArrayList<String> listOfStrings, String aString){
+        listOfStrings.remove(aString);
+        return listOfStrings;
+    }
+
 
 
 
@@ -91,6 +118,8 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
+    public boolean containsIngredient(ArrayList<String> listOfStrings, String aString){
+        return listOfStrings.contains(aString);
+    }
 
 }
